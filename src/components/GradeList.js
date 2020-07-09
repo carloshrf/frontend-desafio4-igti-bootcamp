@@ -21,7 +21,6 @@ const GradeList = () => {
     GradeDataService.getAll()
       .then((response) => {
         setGrade(response.data);
-        console.log(response.data);
       })
       .catch((e) => {
         console.log(e);
@@ -135,7 +134,7 @@ const GradeList = () => {
             </div>
 
             <Link
-              to={'/grade/' + currentGrade.id}
+              to={'/grade/' + currentGrade._id}
               className="badge badge-warning"
             >
               Edit
